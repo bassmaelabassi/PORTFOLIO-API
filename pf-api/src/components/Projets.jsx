@@ -35,7 +35,7 @@ const projects = [
 function Projets() {
 
     useEffect(() => {
-        gsap.to("#projects", { rotation: 360, duration: 2, ease: "power2.inOut" });
+        gsap.to("#projects", { rotation: 360, duration: 3, ease: "power2.inOut" });
     }, []);
 
   return (

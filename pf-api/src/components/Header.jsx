@@ -7,7 +7,7 @@ function Header({ toggleDarkMode }) {
       <h1 className="text-xl font-bold"> Portfolio</h1>
       <button
         onClick={toggleDarkMode}
-        className="primary-btn"
+        className="btn primary-btn"
       >
         Toggle Dark Mode
       </button>
