@@ -5,8 +5,7 @@ const router = express.Router();
 router.post("/", async (req, res) => {
     try {
         const newMessage = new Message({
-            firstName: req.body.firstName,
-            lastName: req.body.lastName,
+            Name: req.body.Name,
             email: req.body.email,
             message: req.body.message
         });

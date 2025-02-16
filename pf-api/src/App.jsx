@@ -32,6 +32,11 @@ function App() {
       <div className={darkMode ? "dark" : ""}>
         <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
           <Header toggleDarkMode={toggleDarkMode} />
+          <div className="text-center my-4">
+            <Link to="/admin" className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+              Accéder à l'Admin
+            </Link>
+          </div>
           <main>
             <Routes>
               <Route path="/" element={<>

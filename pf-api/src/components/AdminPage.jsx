@@ -5,7 +5,7 @@ const AdminPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/Users')
+    fetch('http://localhost:5000/api/messages')
       .then((response) => response.json())
       .then((data) => setContacts(data))
       .catch((error) => console.error('Erreur lors de la récupération des Users :', error));
@@ -13,7 +13,7 @@ const AdminPage = () => {
 
   const handleDelete = async (id) => {
     try {
-      await fetch(`http://localhost:3000/api/Users/${id}`, { method: 'DELETE' });
+      await fetch(`http://localhost:5000/api/messages${id}`, { method: 'DELETE' });
       setContacts(contacts.filter((contact) => contact._id !== id));
     } catch (error) {
       console.error('Erreur lors de la suppression du User :', error);
@@ -39,7 +39,6 @@ const AdminPage = () => {
           <li key={contact._id} className="mb-4 p-4 border rounded">
             <p><strong>Nom :</strong> {contact.name}</p>
             <p><strong>Email :</strong> {contact.email}</p>
-            <p><strong>Phone :</strong> {contact.phone}</p>
             <p><strong>Message :</strong> {contact.message}</p>
             <button
               onClick={() => handleDelete(contact._id)}
